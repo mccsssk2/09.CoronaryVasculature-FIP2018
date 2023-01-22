@@ -1,0 +1,300 @@
+/* !!* *!! MAKE SURE THE WHICHCASE VARIABLE IS ASSIGNED BEFORE YOU RUN THIS SEGMENT OF THE CODE.
+*/
+
+if(whichCase < 0 || whichCase > 3){
+	printf("Which case is probably not assigned. Assign it. Exiting. \n");
+	exit(0);
+}
+
+/* The data can never have 0 segmentToElementRatio. The minimum is 1, see the base case in Kassab tree. */
+if(whichCase==0){
+numberofOrders = 3;
+	segmentElementRatio_mean[0] =    4; 
+	segmentElementRatio_mean[1] =      3; 
+	segmentElementRatio_mean[2] =       9; 
+
+	 segmentElementRatio_SD[0]      = 0; 
+	 segmentElementRatio_SD[1]      =     0; // micrometers
+	 segmentElementRatio_SD[2]      =         0.0; // micrometers		
+
+// just for testing.
+	 elementLengths_mean[0] 	         = 0.125 ; // mm
+	 elementLengths_mean[1] 	         =  0.141; // mm
+	 elementLengths_mean[2] 	         =    0.178; // mm
+	 elementLengths_mean[3] 	         =  0.253; // mm
+	 elementLengths_mean[4] 	         =  0.545; // mm
+	 elementLengths_mean[5] 	         =    1.64 ; // mm
+	 elementLengths_mean[6] 	         =  3.13; // mm
+	 elementLengths_mean[7] 	         =    5.99; // mm
+	 elementLengths_mean[8] 	         =   9.06; // mm
+	 elementLengths_mean[9] 	         =    16.1; // mm
+	 elementLengths_mean[10] 	         =    84.1; // this is mm
+
+	 elementLengths_SD[0] 		   = 0.084; // mm
+	 elementLengths_SD[1] 		   =  0.103; // mm
+	 elementLengths_SD[2] 		   =  0.105; // mm
+	 elementLengths_SD[3] 		   =  0.174; // mm
+	 elementLengths_SD[4] 		   =   0.451; // mm
+	 elementLengths_SD[5] 		   =     1.13; // mm
+	 elementLengths_SD[6] 		   =    2.11; // mm
+	 elementLengths_SD[7] 		   =    3.53; // mm
+	 elementLengths_SD[8] 		   =    5.56; // mm
+	 elementLengths_SD[9] 		   =    13.3; // mm
+	 elementLengths_SD[10] 		   =    0.0; // mm
+
+	 elementDiameters_mean[0] 	   = 9.3; // micrometers
+	 elementDiameters_mean[1] 	   =       12.8; // micrometers
+	 elementDiameters_mean[2] 	   =       17.7; // micrometers
+	 elementDiameters_mean[3] 	   =    28.6; // micrometers
+	 elementDiameters_mean[4] 	   =     63.1; // micrometers
+	 elementDiameters_mean[5] 	   =      132; // micrometers
+	 elementDiameters_mean[6] 	   =    256; // micrometers
+	 elementDiameters_mean[7] 	   =   428; // micrometers
+	 elementDiameters_mean[8] 	   =    706; // micrometers
+	 elementDiameters_mean[9] 	   =    1302; // micrometers
+	 elementDiameters_mean[10] 	   =  3218; // micrometers
+}
+
+// RCA, table 1 and table 5.
+// RCA is from order 1 to 10, there is no order 11.
+if(whichCase==1){
+numberofOrders = 11;
+
+	segmentElementRatio_mean[0] = 1.88; 
+	segmentElementRatio_mean[1] =      1.88; 
+	segmentElementRatio_mean[2] =       2.2; 
+	segmentElementRatio_mean[3] =      2.3; 
+	segmentElementRatio_mean[4] =       2.0; 
+	segmentElementRatio_mean[5] =       2.3; 
+	segmentElementRatio_mean[6] =   3.23; 
+	segmentElementRatio_mean[7] =   4.68; 
+	segmentElementRatio_mean[8] =   5.38; 
+	segmentElementRatio_mean[9] =    8.5; 
+	segmentElementRatio_mean[10] =      26; 
+
+	 segmentElementRatio_SD[0]      = 0.99; 
+	 segmentElementRatio_SD[1]      =     1.0; 
+	 segmentElementRatio_SD[2]      =         1.2; 
+	 segmentElementRatio_SD[3]      =       1.8; 
+	 segmentElementRatio_SD[4]      =       0.9; 
+	 segmentElementRatio_SD[5]      =       1.3; 
+	 segmentElementRatio_SD[6]      =    2.1; 
+	 segmentElementRatio_SD[7]      =     2.7; 
+	 segmentElementRatio_SD[8]      =      3.6; 
+	 segmentElementRatio_SD[9]      =      0.0; 
+	 segmentElementRatio_SD[10]      =    0.0;  
+
+ // lengths of segments and standard deviations in mm.
+segmentLengths_mean[0] =  0.069  ;   segmentLengths_SD[0] =   0.046;
+segmentLengths_mean[1] =  0.083  ;   segmentLengths_SD[1] =   0.070;
+segmentLengths_mean[2] =  0.085  ;   segmentLengths_SD[2] =   0.061;
+segmentLengths_mean[3] =  0.118  ;   segmentLengths_SD[3] =   0.113;
+segmentLengths_mean[4] =  0.449  ;   segmentLengths_SD[4] =   0.350;
+segmentLengths_mean[5] =  0.748  ;   segmentLengths_SD[5] =   0.654;
+segmentLengths_mean[6] =  0.986  ;   segmentLengths_SD[6] =   0.810;
+segmentLengths_mean[7] =  1.26   ;   segmentLengths_SD[7] =   1.10;
+segmentLengths_mean[8] =  1.62   ;   segmentLengths_SD[8] =   1.31;
+segmentLengths_mean[9] =  1.89   ;   segmentLengths_SD[9] =   1.38;
+segmentLengths_mean[10] =  3.24   ;   segmentLengths_SD[10] =   2.09;
+	 
+	 elementLengths_mean[0] 	         = 0.125 ; // mm
+	 elementLengths_mean[1] 	         =  0.141; // mm
+	 elementLengths_mean[2] 	         =    0.178; // mm
+	 elementLengths_mean[3] 	         =  0.253; // mm
+	 elementLengths_mean[4] 	         =  0.545; // mm
+	 elementLengths_mean[5] 	         =    1.64 ; // mm
+	 elementLengths_mean[6] 	         =  3.13; // mm
+	 elementLengths_mean[7] 	         =    5.99; // mm
+	 elementLengths_mean[8] 	         =   9.06; // mm
+	 elementLengths_mean[9] 	         =    16.1; // mm
+	 elementLengths_mean[10] 	         =    84.1; // this is mm
+
+	 elementLengths_SD[0] 		   = 0.084; // mm
+	 elementLengths_SD[1] 		   =  0.103; // mm
+	 elementLengths_SD[2] 		   =  0.105; // mm
+	 elementLengths_SD[3] 		   =  0.174; // mm
+	 elementLengths_SD[4] 		   =   0.451; // mm
+	 elementLengths_SD[5] 		   =     1.13; // mm
+	 elementLengths_SD[6] 		   =    2.11; // mm
+	 elementLengths_SD[7] 		   =    3.53; // mm
+	 elementLengths_SD[8] 		   =    5.56; // mm
+	 elementLengths_SD[9] 		   =    13.3; // mm
+	 elementLengths_SD[10] 		   =    0.0; // mm
+
+	 elementDiameters_mean[0] 	   = 9.3; // micrometers
+	 elementDiameters_mean[1] 	   =       12.8; // micrometers
+	 elementDiameters_mean[2] 	   =       17.7; // micrometers
+	 elementDiameters_mean[3] 	   =    28.6; // micrometers
+	 elementDiameters_mean[4] 	   =     63.1; // micrometers
+	 elementDiameters_mean[5] 	   =      132; // micrometers
+	 elementDiameters_mean[6] 	   =    256; // micrometers
+	 elementDiameters_mean[7] 	   =   428; // micrometers
+	 elementDiameters_mean[8] 	   =    706; // micrometers
+	 elementDiameters_mean[9] 	   =    1302; // micrometers
+	 elementDiameters_mean[10] 	   =  3218; // micrometers
+}
+else if(whichCase==2){
+numberofOrders = 11;
+
+// LAD
+segmentElementRatio_mean[0] = 2.3; // SE ratio and Diameter: micrometers, length mean and SD in mm
+segmentElementRatio_mean[1] =       1.79; // SE ratio and Diameter: micrometers, length mean and SD in mm
+segmentElementRatio_mean[2] =       2.0; // SE ratio and Diameter: micrometers, length mean and SD in mm
+segmentElementRatio_mean[3] =      2.28; // SE ratio and Diameter: micrometers, length mean and SD in mm
+segmentElementRatio_mean[4] =       2.02; // SE ratio and Diameter: micrometers, length mean and SD in mm
+segmentElementRatio_mean[5] =       2.23; // SE ratio and Diameter: micrometers, length mean and SD in mm
+segmentElementRatio_mean[6] =   3.89; // SE ratio and Diameter: micrometers, length mean and SD in mm
+segmentElementRatio_mean[7] =   4.69; // SE ratio and Diameter: micrometers, length mean and SD in mm
+segmentElementRatio_mean[8] =   6.06; // SE ratio and Diameter: micrometers, length mean and SD in mm
+segmentElementRatio_mean[9] =    9.0; // SE ratio and Diameter: micrometers, length mean and SD in mm
+segmentElementRatio_mean[10] =      17; // micrometers
+
+ segmentElementRatio_SD[0]      = 1.4; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ segmentElementRatio_SD[1]      =  0.95; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ segmentElementRatio_SD[2]      =   1.1; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ segmentElementRatio_SD[3]      =   1.3; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ segmentElementRatio_SD[4]      =   1.2; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ segmentElementRatio_SD[5]      =   1.3; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ segmentElementRatio_SD[6]      =   2.1; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ segmentElementRatio_SD[7]      =   3.0; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ segmentElementRatio_SD[8]      =   4.2; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ segmentElementRatio_SD[9]      =   7.0; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ segmentElementRatio_SD[10]      =   0.0;  // micrometers
+
+ elementLengths_mean[0] 	          = 0.115 ; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ elementLengths_mean[1] 	          =  0.136; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ elementLengths_mean[2] 	          =    0.149; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ elementLengths_mean[3] 	          =    0.353; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ elementLengths_mean[4] 	          =     0.502; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ elementLengths_mean[5] 	          =    1.31 ; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ elementLengths_mean[6] 	          =    3.54; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ elementLengths_mean[7] 	          =    4.99; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ elementLengths_mean[8] 	          =   9.03; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ elementLengths_mean[9] 	          =    20.3; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ elementLengths_mean[10] 	          =  47.9; // this is mm
+
+ elementLengths_SD[0] 		   = 0.066; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ elementLengths_SD[1] 		   =  0.088; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ elementLengths_SD[2] 		   =  0.104; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ elementLengths_SD[3] 		   =  0.154; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ elementLengths_SD[4] 		   =  0.349; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ elementLengths_SD[5] 		   =  0.914; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ elementLengths_SD[6] 		   =  2.11; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ elementLengths_SD[7] 		   =  3.02; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ elementLengths_SD[8] 		   =  6.13; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ elementLengths_SD[9] 		   =  17.9; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ elementLengths_SD[10] 		   =  0.0; // mm
+
+segmentLengths_mean[0] = 0.056 ;   segmentLengths_SD[0] =  0.038;
+segmentLengths_mean[1] = 0.072 ;   segmentLengths_SD[1] =  0.045;
+segmentLengths_mean[2] = 0.072 ;   segmentLengths_SD[2] =  0.049;
+segmentLengths_mean[3] = 0.112 ;   segmentLengths_SD[3] =  0.10;
+segmentLengths_mean[4] = 0.4542 ;   segmentLengths_SD[4] =  0.33;
+segmentLengths_mean[5] = 0.609 ;   segmentLengths_SD[5] =  0.48;
+segmentLengths_mean[6] = 0.9202 ;   segmentLengths_SD[6] =  0.79;
+segmentLengths_mean[7] = 1.09 ;   segmentLengths_SD[7] =  0.83;
+segmentLengths_mean[8] = 1.54 ;   segmentLengths_SD[8] =  1.25;
+segmentLengths_mean[9] = 2.26 ;   segmentLengths_SD[9] =  1.56;
+segmentLengths_mean[10] = 2.82 ;   segmentLengths_SD[10] =  1.96;
+
+ elementDiameters_mean[0] 	   = 9.0; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ elementDiameters_mean[1] 	   = 12.3; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ elementDiameters_mean[2] 	   = 17.7; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ elementDiameters_mean[3] 	   = 30.5; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ elementDiameters_mean[4] 	   = 66.2; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ elementDiameters_mean[5] 	   = 139; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ elementDiameters_mean[6] 	   = 308; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ elementDiameters_mean[7] 	   = 462; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ elementDiameters_mean[8] 	   = 714; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ elementDiameters_mean[9] 	   = 1573; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ elementDiameters_mean[10] 	   = 3176; // micrometers
+}
+else if(whichCase==3){
+numberofOrders = 10; 
+
+// LCX
+ segmentElementRatio_mean[0] = 2.3; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ segmentElementRatio_mean[1] =       1.79; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ segmentElementRatio_mean[2] =       2.0; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ segmentElementRatio_mean[3] =      2.06; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ segmentElementRatio_mean[4] =       2.20; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ segmentElementRatio_mean[5] =       2.11; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ segmentElementRatio_mean[6] =   2.75; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ segmentElementRatio_mean[7] =     4.22; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ segmentElementRatio_mean[8] =   6.6; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ segmentElementRatio_mean[9] =    14.0; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ segmentElementRatio_mean[10] =      -1; // micrometers
+
+ segmentElementRatio_SD[0]      = 1.4; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ segmentElementRatio_SD[1]      =        0.95; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ segmentElementRatio_SD[2]      =      1.1; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ segmentElementRatio_SD[3]      =        1.2; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ segmentElementRatio_SD[4]      =        1.3; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ segmentElementRatio_SD[5]      =         1.1; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ segmentElementRatio_SD[6]      =       1.6; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ segmentElementRatio_SD[7]      =      2.4; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ segmentElementRatio_SD[8]      =     4.0; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ segmentElementRatio_SD[9]      =     4.0; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ segmentElementRatio_SD[10]      =      -1;  // micrometers
+
+ elementLengths_mean[0] 	          = 0.115 ; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ elementLengths_mean[1] 	          =  0.136; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ elementLengths_mean[2] 	          =    0.149; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ elementLengths_mean[3] 	          =    0.405; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ elementLengths_mean[4] 	          =    0.908; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ elementLengths_mean[5] 	          =    1.83 ; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ elementLengths_mean[6] 	          =   4.22; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ elementLengths_mean[7] 	          =    6.98; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ elementLengths_mean[8] 	          =   21; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ elementLengths_mean[9] 	          =    49; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ elementLengths_mean[10] 	          =         -1; // this is mm
+
+segmentLengths_mean[0] =  0.056 ; segmentLengths_SD[0] =    0.038; 
+segmentLengths_mean[1] =  0.072 ; segmentLengths_SD[1] =    0.045; 
+segmentLengths_mean[2] =  0.072 ; segmentLengths_SD[2] =    0.049; 
+segmentLengths_mean[3] =  0.190 ; segmentLengths_SD[3] =    0.097; 
+segmentLengths_mean[4] =  0.615 ; segmentLengths_SD[4] =    0.508; 
+segmentLengths_mean[5] =  1.11 ; segmentLengths_SD[5] =    0.983; 
+segmentLengths_mean[6] =  1.6 ; segmentLengths_SD[6] =    1.33; 
+segmentLengths_mean[7] =  1.78 ; segmentLengths_SD[7] =    1.46; 
+segmentLengths_mean[8] =  3.18 ; segmentLengths_SD[8] =    2.41; 
+segmentLengths_mean[9] =  3.54 ; segmentLengths_SD[9] =    2.0; 
+segmentLengths_mean[10] =  -1 ; segmentLengths_SD[10] =    -1; 
+
+ elementLengths_SD[0] 		   = 0.066; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ elementLengths_SD[1] 		   =  0.088; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ elementLengths_SD[2] 		   =  0.104; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ elementLengths_SD[3] 		   =  0.170; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ elementLengths_SD[4] 		   =      0.763; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ elementLengths_SD[5] 		   =    1.34; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ elementLengths_SD[6] 		   =     2.26; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ elementLengths_SD[7] 		   =    3.92; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ elementLengths_SD[8] 		   =   15.6; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ elementLengths_SD[9] 		   =   0.0; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ elementLengths_SD[10] 		   =      -1; // mm
+
+ elementDiameters_mean[0] 	   = 9.0; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ elementDiameters_mean[1] 	   =       12.3; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ elementDiameters_mean[2] 	   =       17.7; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ elementDiameters_mean[3] 	   =    27.5; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ elementDiameters_mean[4] 	   =         73.2; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ elementDiameters_mean[5] 	   =       139; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ elementDiameters_mean[6] 	   =    279; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ elementDiameters_mean[7] 	   =      462; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ elementDiameters_mean[8] 	   =   961; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ elementDiameters_mean[9] 	   =  2603; // SE ratio and Diameter: micrometers, length mean and SD in mm
+ elementDiameters_mean[10] 	   =    -1; // micrometers
+}
+
+// change lengths to micrometers.
+// SE ratio and Diameter: micrometers, length mean and SD in mm
+for(temp_x = 0; temp_x < 11; temp_x++){
+	if(elementLengths_mean[temp_x] > 0.0){
+		/*
+	elementLengths_mean[temp_x] 	=  elementLengths_mean[temp_x] * 1000.0; 
+	elementLengths_SD[temp_x] 		=  elementLengths_SD[temp_x]       * 1000.0; 
+*/
+	 elementDiameters_mean[temp_x] 	   =    elementDiameters_mean[temp_x]/1000.0;
+	}
+}
+

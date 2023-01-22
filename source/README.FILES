@@ -1,0 +1,12 @@
+a) To generate geometry and fibres boundary conditions, run srkHumanVentricleGeom.c.
+
+b) To run the diffusion on the 6 components (fx, fy, fz, sx, sy, sz), use srk3d.c
+
+c) To construct the fibres map, run makeFibresVector.c.
+
+d) To generate Purkinje, generate the mesh using meshlab and then run files in fractal-tree/ and printPaths.c.
+
+e) To generate PF in srk format, run srkPFtoGeom.c
+
+f) To generate vasculature in 3D, run srkVasculature.c.
+
