@@ -13,7 +13,7 @@ Kharche et al. https://www.frontiersin.org/articles/10.3389/fphys.2018.00511/ful
 
 # Dependencies.
 
-This serial code requires GNU C.
+This serial code requires GNU C. Some modest use of PetSc functions may be present due to legacy.
 
 # Install.
 
