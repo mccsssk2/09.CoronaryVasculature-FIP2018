@@ -40,11 +40,13 @@ individual nodes are assigned coordinates that keep them inside the volume while
 # Use.
 
 The driver function in the source is srkVasculature.c. The user can replace the morphometry and connectivty to use
-specific experimental data. A geometry is generated, in this case idealized cardiac ventricles. Compiling is using
+specific experimental data. A geometry is generated, in this case idealized cardiac ventricles. Within the geometry,
+1, 2, or 3 spatially optimised binary trees representing coronary vasculature are generated using the 
+Bassingthwaighte-Beard boundary avoidance and volume filling suggestions. Output is ASCII text and VTK. Compiling is using
 the provided makefiles. Since the optimization is serial and takes a long time, multiple instances are generated
-to allow averaging over an ensemble. The program outputs the optimial structure with data for blood flow, pressure,
-resistance, and other metrics. Code for postprocessing is provided. The end result is an indicative blood flow
-distribution under imposed conditions, e.g. stenosis of LAD.  
+to allow averaging over an ensemble. The program outputs the optimial structure with output for steady state blood flow, pressure,
+resistance, and other metrics. Code for postprocessing is provided. Simple tree pruning is provided. The end result is an indicative blood flow
+distribution under imposed conditions, e.g. stenosis of the largest vessels left circumflex/LAD/RCA.  
 
 # Maintainer.
 
